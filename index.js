@@ -158,6 +158,16 @@ console.log(whatTypeOfAngle(45))
 
 /*13)Create a function to find the index of the greatest element of a given array of integers
 */
+const greatestInThisArray = function (array) {
+    let largest = []
+    for (i=0; i<=largest;i++){
+        if (array[i]>largest) {
+            largest=array[i];
+        }
+    }
+    return largest
+}
+console.log(greatestInThisArray([2, 4, 5, 7]))
 
 /*
 14)
