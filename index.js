@@ -30,7 +30,10 @@ console.log(fifty(50,6))
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
-
+const remChar = function (string, index){
+    return string.slice(index)
+}
+console.log(remChar("string", 2))
 /*
 4)
  Create a function to find the largest of three given integers.
@@ -169,16 +172,12 @@ const greatestInThisArray = function (array) {
 }
 console.log(greatestInThisArray([2, 4, 5, 7]))
 
-/*
-14)
+/*14)Create a function to get the largest even number from an array of integers.*/
 
-Create a function to get the largest even number from an array of integers.
 
-16)
+/*16) Create a function to check from two given integers, whether one is positive and another one is negative.*/
 
-Create a function to check from two given integers, whether one is positive and another one is negative.
-
-17)
+/*17)
 
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
 
