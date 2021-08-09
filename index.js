@@ -3,7 +3,7 @@
 1)
 Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
-sum =  function (a, b) {
+const sum =  function (a, b) {
     if (a === b){
      return  (a + b )*3  
     } else {
@@ -16,51 +16,102 @@ console.log(sum(4,4))
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
 
+const fifty = function (a, b) {
+    if (a === 50 || b === 50 & a+b === 50){
+        return true
+    }
+    else{
+        return false
+    }
+}
+console.log(fifty(50,6))
+
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
 
 /*
-
 4)
  Create a function to find the largest of three given integers.
 */
-
+const theLargest = function(a, b, c){
+    if ( a > b && a > c ){
+         return a
+    }
+    else if ( b > a && b > c ){
+         return b
+    }
+    else {
+        return c
+}
+}
+console.log(theLargest(23, 54, 1))
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
-
+const isInTheRange = function(a, b){
+    if (a>40 && a<60 && b>40 && b<60){
+        return "the number is in range of 40-60"
+    }
+    else if (a>70 && a<100 && b>70 && b<100)
+        return "the number is in range of70-100"
+    else
+        return "The number is not in the range"
+}
+console.log(isInTheRange(34, 9))
 /*
 6) 
-
 Create a function to create a new string of specified copies (positive number) of a given string.
 */
 
 /*
-
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
-
+const isLosAngeles = function(string) {
+    
+    if (string.includes("Los") || string.includes("New") ){
+        return string
+    }
+    else return "boring City"
+}
+console.log(isLosAngeles("Bologna"))
 /*
 8)
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
 
+const sumOfThree = function (array) {
+    let sum = 0; 
+    for (let i = 0; i < array. length; i++) { 
+        sum += array[i]; 
+    } 
+    return sum
+}
+console.log(sumOfThree([1, 2, 1]))
 /*
 
 9)
 Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
+const thereAreOneOrThree = function (array) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === 1 || array[i] === 3) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(thereAreOneOrThree([2,3]))
 
 /*
+10) Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
+*/
 
-10)
 
-Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
-
+/*
 11)
 
 Create a function to find the longest string from a given array of strings.
