@@ -109,13 +109,29 @@ console.log(thereAreOneOrThree([2,3]))
 /*
 10) Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
 */
-
+const thereArentOneOrThree = function (array) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === !1 || array[i] === !3) {
+            return true;
+        }
+    }
+    return false;
+}
+console.log(thereArentOneOrThree([2,3]))
 
 /*
-11)
+11)Create a function to find the longest string from a given array of strings.
 
-Create a function to find the longest string from a given array of strings.
-
+*/
+const longestString = function (str1, str2) {
+if (str1.length > str2.length){
+    return  "First string is longest"
+} if (str1.length < str2.length) {
+    return  "Second string is longest"
+}
+}
+console.log(longestString("first string", "second string"))
+/*
 12)
 
 Create a function to find the types of a given angle.
