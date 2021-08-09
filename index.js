@@ -27,17 +27,17 @@ const fifty = function (a, b) {
 console.log(fifty(50,6))
 
 /*
-3)
-Create a function to remove a character at the specified position of a given string and return the new string.
+3)Create a function to remove a character at the specified position of a given string and return the new string.
 */
+
 const remChar = function (string, index){
     return string.slice(index)
 }
 console.log(remChar("string", 2))
 /*
-4)
- Create a function to find the largest of three given integers.
+4)Create a function to find the largest of three given integers.
 */
+
 const theLargest = function(a, b, c){
     if ( a > b && a > c ){
          return a
@@ -51,8 +51,7 @@ const theLargest = function(a, b, c){
 }
 console.log(theLargest(23, 54, 1))
 /*
-5)
-Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+5)Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
 const isInTheRange = function(a, b){
     if (a>40 && a<60 && b>40 && b<60){
@@ -163,31 +162,51 @@ console.log(whatTypeOfAngle(45))
 */
 const greatestInThisArray = function (array) {
     let largest = []
-    for (i=0; i<=largest;i++){
-        if (array[i]>largest) {
-            largest=array[i];
+    for (i = 0; i <= largest; i++){
+        if (array[i] > largest) {
+            largest = array[i];
         }
     }
     return largest
 }
-console.log(greatestInThisArray([2, 4, 5, 7]))
+console.log(greatestInThisArray([2, 4, 5, 7, 54]))
 
 /*14)Create a function to get the largest even number from an array of integers.*/
-
+const greatestEvenInThisArray = function (array) {
+    let largest = []
+    for (i = 0; i <= largest; i++){
+     
+        if (array[i]% 2 == 0 && array[i] > largest) {
+            largest = array[i];
+        }
+    }
+    return largest
+}
+console.log(greatestEvenInThisArray([2, 4, 5, 7, 54.5, 54.7]))
 
 /*16) Create a function to check from two given integers, whether one is positive and another one is negative.*/
+const positiveOrNegative = function (a, b) {
+  
+        if (a>0 && b>0) {return "Both numbers are positive"}
+        if (a<0 && b<0) {return "Both numbers are negative"}  
+        if (a>0 && b<0) {return "First number is positive, the second is negative"} 
+        if (a<0 && b>0) {return "First number is negative, the second is positive"}
+      
+    
+    return result 
+}
+console.log(positiveOrNegative(-1, 3))
 
-/*17)
-
-Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
-
-18)
-
-Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
-
-19)
-
-Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
+/*18) Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.*/
+const anotherStrangeSum = function (a,b) {
+ if ((a + b)> 50 && (a + b)<80 ) {
+     return 65 
+ } else {
+     return 80
+ }
+}
+console.log(anotherStrangeSum(53, 2))
+/*19) Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
 
 If the number has 3 as a factor, output 'Diego'.
 If the number has 5 as a factor, output 'Riccardo'.
@@ -199,9 +218,22 @@ this would be a simple "Stefano".
 30's factors are 1, 2, 3, 5, 6, 10, 15, 30.
 this would be a "DiegoRiccardo".
 34 has four factors: 1, 2, 17, and 34.
-this would be "34".
+this would be "34".*/
 
-20)
-Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
+const convertNumberInAString =  (num) => {
+    let str = "";
+    if (num % 3 === 0) str += "Diego";
+    if (num % 5 === 0) str += "Riccardo";
+    if (num % 7 === 0) str += "Stefano";
+  
+    return str;
+  };
+  console.log(convertNumberInAString(28))
+/*20) Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC*/
+const getAcronim = (str) =>
+  str
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase())
+    .join("");
 
-*/
+    console.log(getAcronim("Gran Bretagna"))
